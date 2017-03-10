@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:app;assembly=app"
+             x:Class="app.SignIn"
+             BackgroundColor="#2f4159"
+             Title="Welcome">
+    <ScrollView>
+        <StackLayout Margin="15,15,15,15" >
+
+        <Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="StartAndExpand" WidthRequest="153" HeightRequest="159.5" Margin="45,45,45,45" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Padding="10,0,0,0" Grid.Row="0" Grid.Column="0" >
+                <Image Source="telephone.png" />
+            </StackLayout>
+            <StackLayout Padding="0,0,10,0" Grid.Row="0" Grid.Column="1" >
+                    <local:EntryEx TextColor="Black" Keyboard="Telephone" x:Name="MobileNumber" />
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                <BoxView HeightRequest="1" Color="#516073" />
+            </StackLayout>
+            <StackLayout Padding="10,0,0,0" Grid.Row="2" Grid.Column="0" >
+                <Image Source="password.png"/>
+            </StackLayout>
+            <StackLayout Padding="0,0,10,0" Grid.Row="2" Grid.Column="1" >
+                <local:EntryEx TextColor="Black" x:Name="Password" IsPassword="True" />
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                <BoxView HeightRequest="1" Color="#516073" />
+            </StackLayout>
+        </Grid>
+
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="ForgotPasswordText" Text="Forgot Password?" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" TextColor="White" FontSize="11" />
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical">
+            <Label Text="Not a member? " HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="11" />
+            <Label x:Name="RegisterText" Text="Register" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="11" FontAttributes="Bold" />
+        </StackLayout>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
